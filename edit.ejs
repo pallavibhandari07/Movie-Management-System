@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Movie</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:linear-gradient(135deg,#141E30,#243B55);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        form{
+            width:420px;
+            background:#fff;
+            padding:35px;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        h2{
+            text-align:center;
+            color:#1e3c72;
+            margin-bottom:25px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-bottom:18px;
+            border:2px solid #ddd;
+            border-radius:8px;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        input:focus{
+            outline:none;
+            border-color:#1e3c72;
+            box-shadow:0 0 8px rgba(30,60,114,0.3);
+        }
+
+        button{
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:8px;
+            background:#1e3c72;
+            color:white;
+            font-size:17px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#16315d;
+            transform:translateY(-2px);
+        }
+    </style>
+
+</head>
+<body>
+
+    <form action="/update/<%= data._id %>" method="POST">
+
+        <h2>🎬 Edit Movie</h2>
+
+        <input
+            type="text"
+            name="movieName"
+            placeholder="Movie Name"
+            value="<%= data.movieName %>"
+            required
+        >
+
+        <input
+            type="text"
+            name="director"
+            placeholder="Director Name"
+            value="<%= data.director %>"
+            required
+        >
+
+        <input
+            type="text"
+            name="genre"
+            placeholder="Genre"
+            value="<%= data.genre %>"
+            required
+        >
+
+        <input
+            type="number"
+            name="releaseYear"
+            placeholder="Release Year"
+            value="<%= data.releaseYear %>"
+            min="1950"
+            required
+        >
+
+        <input
+            type="number"
+            name="rating"
+            placeholder="Rating (1-10)"
+            value="<%= data.rating %>"
+            min="1"
+            max="10"
+            step="0.1"
+            required
+        >
+
+        <button type="submit">🎬 Update Movie</button>
+
+    </form>
+
+</body>
+</html>

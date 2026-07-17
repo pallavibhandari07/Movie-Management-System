@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Collection System</title>
+  <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:darkblue;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#fff;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+    text-align:center;
+    width:400px;
+}
+
+h1{
+    margin-bottom:30px;
+    color:#333;
+}
+
+.btn{
+    display:block;
+    text-decoration:none;
+    background:#007bff;
+    color:white;
+    padding:14px;
+    margin:15px 0;
+    border-radius:6px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#16315d;
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+  </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎬 Movie Collection System</h1>
+
+        <a href="/getdata" class="btn">
+            🎥 View All Movies
+        </a>
+
+        <a href="/insertdata" class="btn">
+            ➕ Add Movie
+        </a>
+    </div>
+
+</body>
+</html>
